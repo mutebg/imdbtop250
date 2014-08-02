@@ -1,0 +1,152 @@
+@import "framework.less";
+
+body {
+	font-size: 14px;
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #333;
+}
+
+/*
+LAYOUT
+*/
+header {
+	text-align: center;
+	padding: 20px; 
+	color: #333;
+	background: url(../images/logo.png) no-repeat 10px 15px;
+	background-size: auto 80%;
+	padding-left: 220px;
+
+	h1 {
+		font-size: 44px;
+		margin-bottom: 10px;
+	}
+	
+	p {
+		font-size: 20px;
+	}
+}
+
+
+/*
+MODULES
+*/
+.filter {
+	margin: 10px;
+	padding: 10px;
+	background: #eee;
+
+	.search {
+		float: left;
+		width: 250px;
+		background: #fff;
+	}
+
+	.by-year {
+		float: left;
+		line-height: 19px;
+		padding-left: 20px;
+		a {
+			margin-left: 10px;
+			display: inline-block;
+			
+			&.selected {
+				font-weight: bold;
+				color: #000;
+			}
+		}
+	}
+}
+
+.movies {
+	padding-bottom: 20px;
+}
+
+.movie {
+	border: 1px solid #eee;
+	.border-radius(5px);
+	float: left;
+	margin: 10px 0 0 10px;
+	padding: 10px;
+	width: 214px;
+	height: 340px;
+	position: relative;
+	text-align: center;
+	.transition(.3s all);
+
+
+	&:hover {
+		background: #f8f8f8;
+		.drop-shadow(0, 0, 4px, #ccc);
+	}
+
+	.number {
+		font-size: 44px;
+		text-align: center;
+		padding: 10px 0;
+	}
+	
+	.poster {
+		height: 140px;
+		overflow: hidden;
+		display: block;
+		position: absolute;
+		.transition(.3s all);
+		top: 10px;
+		left: 10px;
+
+		img {
+			margin-top: -100px;
+			.transition(.3s all);
+		}
+
+		&:hover {
+			z-index: 100;
+			height: 300px;
+			background: #ccc;
+			
+			img {
+				margin-top: 0;
+			}
+		}
+	}
+
+	.title {
+		font-size: 20px;
+		display: block;
+		padding: 10px 0 10px 0;
+		height: 40px;
+		margin-top: 140px;
+	}
+
+	.year,
+	.info {
+		font-size: 15px;
+		padding-bottom: 6px;
+	}
+
+	.btn {
+		.border-radius(3px);
+		.gradient(#ccc, #bbb);
+		display: block;
+		padding: 10px 0;
+		text-align: center;
+		font-size: 16px;
+		text-decoration: none;
+		color: #000;
+		border:0;
+		width: 100%;
+		height: 35px;
+		cursor: pointer;
+		.transition(.3s all);
+		text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+
+		&.orange {
+			.gradient(#ff9900, #e68a00)
+		}
+
+		&:hover {
+			.drop-shadow(0, 1px, 2px, #ccc);
+		}
+	}
+}

@@ -1,0 +1,323 @@
+/*
+VARIABLES
+*/
+/*
+BASE & RESET
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/*
+FUNCTIONS
+*/
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+body {
+  font-size: 14px;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #333;
+}
+/*
+LAYOUT
+*/
+header {
+  text-align: center;
+  padding: 20px;
+  color: #333;
+  background: url(../images/logo.png) no-repeat 10px 15px;
+  background-size: auto 80%;
+  padding-left: 220px;
+}
+header h1 {
+  font-size: 44px;
+  margin-bottom: 10px;
+}
+header p {
+  font-size: 20px;
+}
+/*
+MODULES
+*/
+.filter {
+  margin: 10px;
+  padding: 10px;
+  background: #eee;
+}
+.filter .search {
+  float: left;
+  width: 250px;
+  background: #fff;
+}
+.filter .by-year {
+  float: left;
+  line-height: 19px;
+  padding-left: 20px;
+}
+.filter .by-year a {
+  margin-left: 10px;
+  display: inline-block;
+}
+.filter .by-year a.selected {
+  font-weight: bold;
+  color: #000;
+}
+.movies {
+  padding-bottom: 20px;
+}
+.movie {
+  border: 1px solid #eee;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  float: left;
+  margin: 10px 0 0 10px;
+  padding: 10px;
+  width: 214px;
+  height: 340px;
+  position: relative;
+  text-align: center;
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+}
+.movie:hover {
+  background: #f8f8f8;
+  -webkit-box-shadow: 0 0 4px 0 #cccccc;
+  -moz-box-shadow: 0 0 4px 0 #cccccc;
+  box-shadow: 0 0 4px 0 #cccccc;
+}
+.movie .number {
+  font-size: 44px;
+  text-align: center;
+  padding: 10px 0;
+}
+.movie .poster {
+  height: 140px;
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+  top: 10px;
+  left: 10px;
+}
+.movie .poster img {
+  margin-top: -100px;
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+}
+.movie .poster:hover {
+  z-index: 100;
+  height: 300px;
+  background: #ccc;
+}
+.movie .poster:hover img {
+  margin-top: 0;
+}
+.movie .title {
+  font-size: 20px;
+  display: block;
+  padding: 10px 0 10px 0;
+  height: 40px;
+  margin-top: 140px;
+}
+.movie .year,
+.movie .info {
+  font-size: 15px;
+  padding-bottom: 6px;
+}
+.movie .btn {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #cccccc;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #cccccc 1%, #bbbbbb 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #cccccc), color-stop(100%, #bbbbbb));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #cccccc 1%, #bbbbbb 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #cccccc 1%, #bbbbbb 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #cccccc 1%, #bbbbbb 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #cccccc 1%, #bbbbbb 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#cccccc, endColorstr=#bbbbbb, GradientType=0);
+  /* IE6-9 */
+  display: block;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 16px;
+  text-decoration: none;
+  color: #000;
+  border: 0;
+  width: 100%;
+  height: 35px;
+  cursor: pointer;
+  -webkit-transition: 0.3s all;
+  -moz-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+  text-shadow: 1px 1px 2px #969696;
+}
+.movie .btn.orange {
+  background: #ff9900;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #ff9900 1%, #e68a00 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(1%, #ff9900), color-stop(100%, #e68a00));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ff9900 1%, #e68a00 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ff9900 1%, #e68a00 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ff9900 1%, #e68a00 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #ff9900 1%, #e68a00 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ff9900, endColorstr=#e68a00, GradientType=0);
+  /* IE6-9 */
+}
+.movie .btn:hover {
+  -webkit-box-shadow: 0 1px 2px 0 #cccccc;
+  -moz-box-shadow: 0 1px 2px 0 #cccccc;
+  box-shadow: 0 1px 2px 0 #cccccc;
+}
